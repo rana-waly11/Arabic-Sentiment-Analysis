@@ -12,8 +12,8 @@ This repository contains solutions for two challenges:
 ## Challenge 1: Sentiment Analysis Approach
 
 The `challenge1` folder contains the following files:
-- `approach.py`: Python code implementing the sentiment analysis approach.
-- `report_challenge1.md`: A report explaining the sentiment analysis approach used.
+- `Challenge 1 Code.ipynb`: Python code implementing the sentiment analysis approach.
+- `Challenge 1 Report.pdf`: A report explaining the sentiment analysis approach used.
 
 ## Challenge 2: Dockerize and Serve the Sentiment Analysis Model
 
