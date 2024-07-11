@@ -56,7 +56,8 @@ docker build -t sentiment-analysis-api .
 ```sh
 docker run -p 5000:5000 sentiment-analysis-api
 ```
-4. **Testing:**
+4. **Testing**:
+   
 a. ***Testing using Interface***: run the given local link example:
 ```sh
 http://127.0.0.1:5000
