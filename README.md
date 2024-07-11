@@ -43,15 +43,15 @@ Before running the Docker container, you need to download the model files from t
 
 ```sh
 git clone <repository-url>
-
+```
 2. **Download the model and place it in the challenge2/Model directory:**
 
 3. **Build the Docker image:**
 ```sh
 cd <repository-directory>/challenge2
 docker build -t sentiment-analysis-api .
-
+```
 3. **Run the Docker container:**
 ```sh
 docker run -p 5000:5000 sentiment-analysis-api
-
+```
