@@ -21,14 +21,21 @@ The `challenge2` folder contains the following files:
 - `app.py`: Flask API code for model inference.
 - `Dockerfile`: Docker configuration file.
 - `requirements.txt`: List of Python dependencies.
-- `report_challenge2.md`: A report explaining the test cases for the API.
+- `Challenge 2 Report.pdf`: A report explaining the test cases for the API.
+
+### Download the Model
+
+Before running the Docker container, you need to download the model files from the following link and place them in the `challenge2/Model` directory:
+
+[Download Model](https://drive.google.com/drive/folders/1a-j7f03NToYpLXPyUaDD3yE4OCMynR97?usp=sharing)
+
 
 ## Steps to Run the API and Docker Image
 
 ### Prerequisites
 
 - Docker installed on your system
-- Postman or any other API testing tool
+- Postman installed
 
 ### Running the Docker Container
 
@@ -36,4 +43,13 @@ The `challenge2` folder contains the following files:
 
 ```sh
 git clone <repository-url>
+
+2. **Download the model and place it in the challenge2/Model directory:**
+
+3. **Build the Docker image:**
 cd <repository-directory>/challenge2
+docker build -t sentiment-analysis-api .
+
+3. **Run the Docker container:**
+docker run -p 5000:5000 sentiment-analysis-api
+
