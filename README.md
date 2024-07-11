@@ -21,6 +21,7 @@ The `challenge2` folder contains the following files:
 - `app.py`: Flask API code for model inference.
 - `Dockerfile`: Docker configuration file.
 - `requirements.txt`: List of Python dependencies.
+- `templates`: contain the index.html file.
 - `Challenge 2 Report.pdf`: A report explaining the test cases for the API.
 
 ### Download the Model
@@ -54,4 +55,36 @@ docker build -t sentiment-analysis-api .
 3. **Run the Docker container:**
 ```sh
 docker run -p 5000:5000 sentiment-analysis-api
+```
+4. **Testing:**
+a. ***Testing using Interface***: run the given local link example:
+```sh
+http://127.0.0.1:5000
+```
+b. ***Testing using Postman***: To test the API, you can use Postman or any other API testing tool. Follow these steps:
+
+1. **Open Postman and create a new request.**
+
+2. **Set the request type to POST and enter the URL**:
+```sh
+http://localhost:5000/predict
+```
+3. **Set the headers**:
+```sh
+Key: Content-Type
+Value: application/json
+```
+4. **Set the body to raw and select JSON format**:
+```sh
+{
+  "text": "الف مبروك، ويستاهلون وعقبالي بإذن الله 😭🤲🤍🌙"
+}
+```
+5. **Send the request and check the response**:
+The response will contain the original text and the predicted sentiment label.
+```sh
+{
+  "text": "الف مبروك، ويستاهلون وعقبالي بإذن الله 😭🤲🤍🌙",
+  "predicted_label": "positive"
+}
 ```
